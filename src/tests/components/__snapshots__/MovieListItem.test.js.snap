@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render MovieListItem with props 1`] = `
+<div>
+  <div
+    className="list-item"
+    onClick={[Function]}
+  >
+    <h3
+      className="list-item__title"
+    >
+      Absolute Bite
+    </h3>
+    <p
+      className="list-item__subtitle"
+    >
+      Drama@april.biz
+    </p>
+    <p
+      className="list-item__author"
+    >
+      Walsh Mertie
+    </p>
+  </div>
+  <Modal
+    show={false}
+  >
+    <Connect(MovieEdit)
+      id="1"
+      onClose={[Function]}
+    />
+  </Modal>
+</div>
+`;

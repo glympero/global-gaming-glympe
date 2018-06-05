@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EditMoviePage correctly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Absolute Bite
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <MovieForm
+      movie={
+        Object {
+          "director": Object {
+            "gender": "Female",
+            "name": "Walsh Mertie",
+          },
+          "genre": "Drama@april.biz",
+          "id": "1",
+          "release_date": "12 June 2017",
+          "title": "Absolute Bite",
+        }
+      }
+      onSubmit={[Function]}
+    />
+    <button
+      className="button button--secondary"
+      onClick={[Function]}
+    >
+      Remove
+    </button>
+  </div>
+</div>
+`;
