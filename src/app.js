@@ -9,10 +9,14 @@ import './styles/styles.scss';
 
 const store = configureStore();
 
-ReactDOM.render(
+const jsx = (
     <Provider store={store}>
         <AppRouter />
-    </Provider>,
+    </Provider>
+);
+
+ReactDOM.render(
+    jsx,
     document.getElementById('app')
 );
 

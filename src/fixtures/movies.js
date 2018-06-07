@@ -8,6 +8,13 @@ const gender = [
   'Female'
 ];
 
+const imagePosters = [
+  'https://static.rogerebert.com/uploads/movie/movie_poster/delirium-2018/large_delirium-poster-2.jpg',
+  'https://static.rogerebert.com/uploads/movie/movie_poster/the-ballad-of-narayama-1958/large_xBEpFtVYieURXoPaXyzGTgTKwGw.jpg',
+  'https://static.rogerebert.com/uploads/movie/movie_poster/monsieur-hire-1989/large_jrLUxpEGCV11OStmz1fqHA1bkXq.jpg',
+  'https://static.rogerebert.com/uploads/movie/movie_poster/spirited-away-2002/large_ydIpyTzCc5iYAqjlbcCmgSckebE.jpg'
+]
+
 const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -25,6 +32,10 @@ const generateDirectorName = () => {
   return `${faker.name.lastName()} ${faker.name.firstName()}`;
 }
 
+const generateDescription = () => {	
+  return faker.lorem.paragraph();
+}
+
 const generateMovies = (number) => {
   let movies = [];
   for(let i = 0; i < number; i++){
@@ -37,6 +48,8 @@ const generateMovies = (number) => {
           gender: gender[getRandomInt(0,1)]
         },
         genre: genres[faker.random.number(6)],
+        description: generateDescription(),
+        poster_path: imagePosters[faker.random.number(imagePosters.length-1)],
         release_date: faker.date.past()
       }
     )

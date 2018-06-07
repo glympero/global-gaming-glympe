@@ -9,3 +9,10 @@
 
 ### Testing
 - yarn test --watch
+
+
+### Decision
+
+#### Redux
+
+#### Babel Polyfill

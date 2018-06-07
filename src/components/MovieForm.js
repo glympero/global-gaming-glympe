@@ -8,9 +8,10 @@ class MovieForm extends React.Component {
     this.state = {
       title: props.movie ? props.movie.title : '',
       genre: props.movie ? props.movie.genre : '',
+      description: props.movie ? props.movie.description : '',
       directorName: props.movie ? props.movie.director.name : '',
       directorGender: props.movie ? props.movie.director.gender : '',
-      release_date: props.movie ? moment(props.movie.release_date, 'DD MMMM YYYY') : '',
+      release_date: props.movie ? moment(props.movie.release_date).format("Do MMM YYYY")  : '',
       error: ''
     }
   }
