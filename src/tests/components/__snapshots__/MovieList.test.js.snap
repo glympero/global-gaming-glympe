@@ -17,6 +17,7 @@ exports[`should render MovieList with movies 1`] = `
       genre="Drama@april.biz"
       id="1"
       key="1"
+      poster_path="12345"
       release_date="12 June 2017"
       title="Absolute Bite"
     />
@@ -30,6 +31,7 @@ exports[`should render MovieList with movies 1`] = `
       genre="Children"
       id="2"
       key="2"
+      poster_path="12345"
       release_date="26 June 2017"
       title="Alarmed Department"
     />
@@ -43,6 +45,7 @@ exports[`should render MovieList with movies 1`] = `
       genre="Mystery"
       id="3"
       key="3"
+      poster_path="12345"
       release_date="18 December 2017"
       title="Tight Ticket"
     />

@@ -30,9 +30,3 @@ test('should test editMovie correctly', () => {
     expect(onClose).toHaveBeenLastCalledWith();
     expect(editMovie).toHaveBeenLastCalledWith(movies[0].id, movies[1]);
 });
-
-test('should test remove movie correctly', () => {
-    wrapper.find('button').prop('onClick')();
-    expect(onClose).toHaveBeenLastCalledWith();
-    expect(removeMovie).toHaveBeenLastCalledWith({ id: movies[0].id})
-});

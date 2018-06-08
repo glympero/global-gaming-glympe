@@ -39,6 +39,31 @@
   }
 }
 
+.list-item__cardTitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.list-item__cardMedia {
+  height: 280px;
+  width: 220px;
+  overflow: hidden;
+}
+
+.list-item__card {
+  cursor: pointer;
+  height: 280px;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.list-item__bgImage {
+  width: 100%;
+}
+
+
+
 .list-item__title {
   margin: 0;
   word-break: break-all;

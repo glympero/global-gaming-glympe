@@ -57,6 +57,7 @@ test('shound edit an existing movie', () => {
                 gender: 'Female'
             },
             release_date: '12 June 2017',
+            poster_path: '12345'
             },
         movies[1]
     ]);

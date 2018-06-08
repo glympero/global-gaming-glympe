@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MovieForm from './MovieForm';
 import MovieModal from './MovieModal';
 import { connect } from 'react-redux';
 import { editMovie, removeMovie } from '../actions/movies';
@@ -19,34 +18,13 @@ export class MovieEdit extends React.Component {
 
   render() {
     return (
-     
-      <MovieModal
-        onSubmit={this.onSubmit}
-        movie={this.props.movie}
-      />
-       
-     
+        <MovieModal
+          onSubmit={this.onSubmit}
+          movie={this.props.movie}
+          remove={this.onRemove}
+        />
     )
   }
-
-  // render() {
-  //   return (
-  //     <div>
-  //       <div className='page-header'>
-  //           <div className='content-container'>
-  //             <h1 className='page-header__title'>{this.props.movie.title}</h1>
-  //           </div>
-  //         </div>
-  //         <div className='content-container'>
-  //           <MovieModal
-  //             onSubmit={this.onSubmit}
-  //             movie={this.props.movie}
-  //           />
-  //           <button className='button button--secondary' onClick={this.onRemove}>Remove</button>
-  //         </div>
-  //       </div>
-  //   )
-  // }
 }
 
 const mapStateToProps = (state, props) => {

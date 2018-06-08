@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Dialog } from 'material-ui';
+import Edit from "material-ui/svg-icons/image/edit"
 import moment from 'moment';
 
 const styles = {
@@ -20,6 +21,7 @@ class MovieForm extends React.Component {
     super(props);
     this.state = {
       title: props.movie ? props.movie.title : '',
+      allowEdit: false,
       error: ''
     }
   }
@@ -50,8 +52,24 @@ class MovieForm extends React.Component {
     }
   }
 
+  onAllowEditChange = () => {
+    this.setState({
+      allowEdit: !this.state.allowEdit
+    })
+  }
+
+  confirmRemove = () => {
+    const { remove } = this.props;
+    const result = confirm("Want to delete?");
+    if(result){
+      remove();
+    }
+    return false;
+  }
+
 render() {
     const { movie } = this.props;
+    const { allowEdit, title, error } = this.state;
     return (
       <Dialog
         autoScrollBodyContent={true}
@@ -60,12 +78,17 @@ render() {
         open={true}
       >
         <div style={styles.dialogContent(movie.poster_path)}>
-        <h1>{this.state.title}</h1>
+        <h1>{title} <button className='editButton' onClick={this.onAllowEditChange}><Edit style={{ color: 'red'}}/></button></h1>
+        { allowEdit && <input className='text-input' type='text' value={title} onChange={this.onTitleChange} placeholder='title' autoFocus/> }
+        { !!error && <p className='form__error'>{error}</p>}
         <h5>{movie.genre}</h5>
         <p>{movie.description}</p>
         <p>Director: {movie.director.name}</p>
-        <p>Release Date: {moment(movie.release_date).format("Do MMM YYYY")}</p>
-        <button className='button button--modal' onClick={this.onSubmit}>Edit Title / Close</button>
+        <p>Release Date: {moment(movie.release_date, "Do MMM YYYY")}</p>
+        <div className='modal--buttons'>
+          <button className='button button--modal' onClick={this.onSubmit}>Close</button>
+          { allowEdit && <button className='button button--modal button--danger' onClick={this.confirmRemove}>Remove</button> }
+        </div>
         </div>
     </Dialog>
     );
@@ -74,7 +97,8 @@ render() {
 
 MovieForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  movie: PropTypes.object.isRequired
+  movie: PropTypes.object.isRequired,
+  remove: PropTypes.func.isRequired
 };
 
 export default MovieForm;

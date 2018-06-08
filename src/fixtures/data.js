@@ -9,6 +9,7 @@ export default [
             gender: 'Female'
         },
         release_date: '12 June 2017',
+        poster_path: '12345'
     },
     {
         id: '2',
@@ -19,6 +20,7 @@ export default [
             gender: 'Male'
         },
         release_date: '26 June 2017',
+        poster_path: '12345'
     },
     {
         id: '3',
@@ -29,5 +31,6 @@ export default [
             gender: 'Female'
         },
         release_date: '18 December 2017',
+        poster_path: '12345'
     }   
 ];

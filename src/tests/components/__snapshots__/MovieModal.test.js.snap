@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render MovieModal correctly 1`] = `
+<Dialog
+  autoDetectWindowHeight={true}
+  autoScrollBodyContent={true}
+  modal={false}
+  open={true}
+  repositionOnUpdate={true}
+  title={null}
+>
+  <div
+    style={
+      Object {
+        "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(12345)",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100%",
+        "color": "white",
+        "height": "100%",
+        "minHeight": 400,
+        "padding": 10,
+      }
+    }
+  >
+    <h1>
+      Absolute Bite
+       
+      <button
+        className="editButton"
+        onClick={[Function]}
+      >
+        <ImageEdit
+          style={
+            Object {
+              "color": "red",
+            }
+          }
+        />
+      </button>
+    </h1>
+    <h5>
+      Drama@april.biz
+    </h5>
+    <p />
+    <p>
+      Director: 
+      Walsh Mertie
+    </p>
+    <p>
+      Release Date: 
+    </p>
+    <div
+      className="modal--buttons"
+    >
+      <button
+        className="button button--modal"
+        onClick={[Function]}
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</Dialog>
+`;

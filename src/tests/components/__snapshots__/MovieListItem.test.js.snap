@@ -1,34 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render MovieListItem with props 1`] = `
-<div>
-  <div
-    className="list-item"
-    onClick={[Function]}
-  >
-    <h3
-      className="list-item__title"
+<MuiThemeProvider>
+  <div>
+    <Card
+      className="list-item__card"
+      expandable={false}
+      expanded={null}
+      initiallyExpanded={false}
+      onClick={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
     >
-      Absolute Bite
-    </h3>
-    <p
-      className="list-item__subtitle"
-    >
-      Drama@april.biz
-    </p>
-    <p
-      className="list-item__author"
-    >
-      Walsh Mertie
-    </p>
+      <CardMedia
+        className="list-item__cardMedia"
+        overlay={
+          <CardTitle
+            subtitle="Drama@april.biz"
+            title="Absolute Bite"
+          />
+        }
+      >
+        <Modal
+          show={false}
+        >
+          <Connect(MovieEdit)
+            id="1"
+            onClose={[Function]}
+          />
+        </Modal>
+        <img
+          className="list-item__bgImage"
+          src="12345"
+        />
+      </CardMedia>
+    </Card>
   </div>
-  <Modal
-    show={false}
-  >
-    <Connect(MovieEdit)
-      id="1"
-      onClose={[Function]}
-    />
-  </Modal>
-</div>
+</MuiThemeProvider>
 `;
