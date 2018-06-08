@@ -84,7 +84,7 @@ render() {
         <h5>{movie.genre}</h5>
         <p>{movie.description}</p>
         <p>Director: {movie.director.name}</p>
-        <p>Release Date: {moment(movie.release_date, "Do MMM YYYY")}</p>
+        <p>Release Date: {(moment(new Date(movie.release_date)).isValid() ? moment(new Date(movie.release_date)).format('Do MMM YYYY') : ' -- ')}</p>
         <div className='modal--buttons'>
           <button className='button button--modal' onClick={this.onSubmit}>Close</button>
           { allowEdit && <button className='button button--modal button--danger' onClick={this.confirmRemove}>Remove</button> }

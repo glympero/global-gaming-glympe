@@ -48,6 +48,7 @@ exports[`should render MovieModal correctly 1`] = `
     </p>
     <p>
       Release Date: 
+      12th Jun 2017
     </p>
     <div
       className="modal--buttons"
