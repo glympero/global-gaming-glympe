@@ -51,6 +51,7 @@ const MovieListFilters = (props) => {
                 props.dispatch(sortByDirector());
               }
             }}>
+          
           <option value='title'>Title</option>
           <option value='director'>Director</option>
         </select>

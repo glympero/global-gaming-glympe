@@ -52,11 +52,9 @@ test('shound edit an existing movie', () => {
             id: movies[0].id,
             title: 'Tight Ticket',
             genre: 'Drama@april.biz',
-            director: {
-                name: 'Walsh Mertie',
-                gender: 'Female'
-            },
-            release_date: '12 June 2017',
+            director: 'Walsh Mertie',
+            runtime: 120,
+            release_date: '2017',
             poster_path: '12345'
             },
         movies[1]

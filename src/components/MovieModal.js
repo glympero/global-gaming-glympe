@@ -58,6 +58,13 @@ class MovieForm extends React.Component {
     })
   }
 
+  convertMinsToHrsMins = (mins) => {
+    let h = Math.floor(mins / 60);
+    let m = mins % 60;
+    m = m < 10 ? '0' + m : m;
+    return `${h}h ${m}m`;
+  }
+
   confirmRemove = () => {
     const { remove } = this.props;
     const result = confirm("Want to delete?");
@@ -83,8 +90,9 @@ render() {
         { !!error && <p className='form__error'>{error}</p>}
         <h5>{movie.genre}</h5>
         <p>{movie.description}</p>
-        <p>Director: {movie.director.name}</p>
-        <p>Release Date: {(moment(new Date(movie.release_date)).isValid() ? moment(new Date(movie.release_date)).format('Do MMM YYYY') : ' -- ')}</p>
+        <p>Director: {movie.director}</p>
+        <p>Runtime: {this.convertMinsToHrsMins(movie.runtime)}</p>
+        <p>Release Date: {(moment(new Date(movie.release_date)).isValid() ? moment(new Date(movie.release_date)).format('YYYY') : ' -- ')}</p>
         <div className='modal--buttons'>
           <button className='button button--modal' onClick={this.onSubmit}>Close</button>
           { allowEdit && <button className='button button--modal button--danger' onClick={this.confirmRemove}>Remove</button> }

@@ -8,45 +8,33 @@ exports[`should render MovieList with movies 1`] = `
     className="list-body"
   >
     <MovieListItem
-      director={
-        Object {
-          "gender": "Female",
-          "name": "Walsh Mertie",
-        }
-      }
+      director="Walsh Mertie"
       genre="Drama@april.biz"
       id="1"
       key="1"
       poster_path="12345"
-      release_date="12 June 2017"
+      release_date="2017"
+      runtime={120}
       title="Absolute Bite"
     />
     <MovieListItem
-      director={
-        Object {
-          "gender": "Male",
-          "name": "Grady Macey",
-        }
-      }
+      director="Grady Macey"
       genre="Children"
       id="2"
       key="2"
       poster_path="12345"
-      release_date="26 June 2017"
+      release_date="2017"
+      runtime={130}
       title="Alarmed Department"
     />
     <MovieListItem
-      director={
-        Object {
-          "gender": "Female",
-          "name": "McKenzie Hertha",
-        }
-      }
+      director="McKenzie Hertha"
       genre="Mystery"
       id="3"
       key="3"
       poster_path="12345"
-      release_date="18 December 2017"
+      release_date="2017"
+      runtime={90}
       title="Tight Ticket"
     />
   </div>

@@ -21,6 +21,9 @@ class MovieListItem extends React.Component {
   }
 
   render() {
+
+    const { id, title, director, genre, poster_path } = this.props;
+
     return (
       <MuiThemeProvider>
         <div>
@@ -34,15 +37,15 @@ class MovieListItem extends React.Component {
               className='list-item__cardMedia'
               overlay={
                 <CardTitle
-                  title={this.props.title} 
-                  subtitle={this.props.genre} 
+                  title={title} 
+                  subtitle={`${director} - ${genre}`}
                 />
               }
             >
             <Modal show={this.state.isOpen}>
-              <MovieEdit id={this.props.id} onClose={this.toggleModal} />
+              <MovieEdit id={id} onClose={this.toggleModal} />
             </Modal>
-            <img className='list-item__bgImage' src={this.props.poster_path} />
+            <img className='list-item__bgImage' src={poster_path} />
             </CardMedia>
           </Card>
         </div> 
@@ -55,6 +58,7 @@ MovieListItem.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   genre: PropTypes.string.isRequired,
+  director: PropTypes.string.isRequired,
   poster_path: PropTypes.string.isRequired
 };
 

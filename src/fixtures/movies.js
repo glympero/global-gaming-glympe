@@ -12,7 +12,9 @@ const imagePosters = [
   'https://static.rogerebert.com/uploads/movie/movie_poster/delirium-2018/large_delirium-poster-2.jpg',
   'https://static.rogerebert.com/uploads/movie/movie_poster/the-ballad-of-narayama-1958/large_xBEpFtVYieURXoPaXyzGTgTKwGw.jpg',
   'https://static.rogerebert.com/uploads/movie/movie_poster/monsieur-hire-1989/large_jrLUxpEGCV11OStmz1fqHA1bkXq.jpg',
-  'https://static.rogerebert.com/uploads/movie/movie_poster/spirited-away-2002/large_ydIpyTzCc5iYAqjlbcCmgSckebE.jpg'
+  'https://static.rogerebert.com/uploads/movie/movie_poster/spirited-away-2002/large_ydIpyTzCc5iYAqjlbcCmgSckebE.jpg',
+  'https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg',
+  'https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg,'
 ]
 
 const getRandomInt = (min, max) => {
@@ -43,11 +45,9 @@ const generateMovies = (number) => {
       {
         id: faker.random.uuid(),
         title: generateMovieTitle(),
-        director: {
-          name: generateDirectorName(),
-          gender: gender[getRandomInt(0,1)]
-        },
-        genre: genres[faker.random.number(6)],
+        director: generateDirectorName(),
+        runtime: faker.random.number(300),
+        genre: genres[faker.random.number(genres.length-1)],
         description: generateDescription(),
         poster_path: imagePosters[faker.random.number(imagePosters.length-1)],
         release_date: faker.date.past()
@@ -57,6 +57,6 @@ const generateMovies = (number) => {
   return movies;
 }
 
-const movies = JSON.stringify(generateMovies(100));
+const movies = generateMovies(100);
 
 export default movies;

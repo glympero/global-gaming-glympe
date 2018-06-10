@@ -49,6 +49,9 @@
   height: 280px;
   width: 220px;
   overflow: hidden;
+  @media (max-width: $desktop-breakpoint) {
+    width: 100%;
+  }
 }
 
 .list-item__card {
@@ -61,8 +64,6 @@
 .list-item__bgImage {
   width: 100%;
 }
-
-
 
 .list-item__title {
   margin: 0;

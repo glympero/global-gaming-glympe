@@ -5,12 +5,12 @@ import { setMovie } from '../actions/movies';
 import MovieListItem from './MovieListItem';
 import selectmovies from '../selectors/movies';
 
-import data from '../fixtures/movies';
+import data from '../fixtures/movies.json';
 
 export class MovieList extends React.Component {
 
   componentDidMount = () => {
-    this.props.setMovie(JSON.parse(data));
+    this.props.setMovie(data);
   }
 
   render() {

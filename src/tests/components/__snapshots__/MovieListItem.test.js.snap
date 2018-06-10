@@ -16,7 +16,7 @@ exports[`should render MovieListItem with props 1`] = `
         className="list-item__cardMedia"
         overlay={
           <CardTitle
-            subtitle="Drama@april.biz"
+            subtitle="Walsh Mertie - Drama@april.biz"
             title="Absolute Bite"
           />
         }

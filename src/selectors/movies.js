@@ -8,7 +8,7 @@ const getVisibleMovies = (movies, filters) => {
         if(sortBy === 'title') {
             return a.title > b.title ? 1 : -1;
         }else if (sortBy === 'director') {
-            return a.director.name.toLowerCase() > b.director.name.toLowerCase() ? 1 : -1;
+            return a.director.toLowerCase() > b.director.toLowerCase() ? 1 : -1;
         }
     });
 };

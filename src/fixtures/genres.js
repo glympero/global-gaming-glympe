@@ -1,12 +1,14 @@
 export const genres = [
     'Adventure',
-    'Children',
+    'Animation',
+    'Biography',
     'Drama',
+    'History',
     'Fantasy',
-    'Horror',
-    'Humor',
+    'Family',
+    'Musical',
     'Mystery',
-    'Nonfiction',
     'Romance',
-    'Sci-fi'
+    'Sci-Fi',
+    'War'
   ];

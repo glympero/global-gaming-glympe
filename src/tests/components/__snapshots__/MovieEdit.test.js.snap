@@ -4,14 +4,12 @@ exports[`should render EditMoviePage correctly 1`] = `
 <MovieForm
   movie={
     Object {
-      "director": Object {
-        "gender": "Female",
-        "name": "Walsh Mertie",
-      },
+      "director": "Walsh Mertie",
       "genre": "Drama@april.biz",
       "id": "1",
       "poster_path": "12345",
-      "release_date": "12 June 2017",
+      "release_date": "2017",
+      "runtime": 120,
       "title": "Absolute Bite",
     }
   }
