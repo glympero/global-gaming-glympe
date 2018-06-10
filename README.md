@@ -53,4 +53,8 @@ $ yarn test --watch
   -- When viewing the details of a movie, click on edit button next to title, edit movie and then close (save) and also showing an error message if title is empty
  - Added the ability to remove a movie:
   -- When viewing the details of a movie, click on edit button next to title and a remove button appears on bottom right, where a movie can be removed after confirmation.
- - Added some tests
+ - Added tests for:
+  -- action generators
+  -- movies selector
+  -- movies and filters reducer
+  -- snapshot testing with enzyme
