@@ -38,20 +38,29 @@ exports[`should render MovieModal correctly 1`] = `
         />
       </button>
     </h1>
-    <h5>
+    <h3>
       Drama@april.biz
-    </h5>
+    </h3>
     <p />
     <p>
-      Director: 
+      <i>
+        Director:
+      </i>
+       
       Walsh Mertie
     </p>
     <p>
-      Runtime: 
+      <i>
+        Runtime:
+      </i>
+       
       2h 00m
     </p>
     <p>
-      Release Date: 
+      <i>
+        Release Date:
+      </i>
+       
       2017
     </p>
     <div

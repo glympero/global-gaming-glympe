@@ -88,11 +88,12 @@ render() {
         <h1>{title} <button className='editButton' onClick={this.onAllowEditChange}><Edit style={{ color: 'red'}}/></button></h1>
         { allowEdit && <input className='text-input' type='text' value={title} onChange={this.onTitleChange} placeholder='title' autoFocus/> }
         { !!error && <p className='form__error'>{error}</p>}
-        <h5>{movie.genre}</h5>
+        <h3>{movie.genre}</h3>
         <p>{movie.description}</p>
-        <p>Director: {movie.director}</p>
-        <p>Runtime: {this.convertMinsToHrsMins(movie.runtime)}</p>
-        <p>Release Date: {(moment(new Date(movie.release_date)).isValid() ? moment(new Date(movie.release_date)).format('YYYY') : ' -- ')}</p>
+        <p><i>Director:</i> {movie.director}</p>
+        {movie.actors !== undefined && <p><i>Actors:</i> {movie.actors}</p>}
+        <p><i>Runtime:</i> {this.convertMinsToHrsMins(movie.runtime)}</p>
+        <p><i>Release Date:</i> {(moment(new Date(movie.release_date)).isValid() ? moment(new Date(movie.release_date)).format('YYYY') : ' -- ')}</p>
         <div className='modal--buttons'>
           <button className='button button--modal' onClick={this.onSubmit}>Close</button>
           { allowEdit && <button className='button button--modal button--danger' onClick={this.confirmRemove}>Remove</button> }
